@@ -1,0 +1,30 @@
+.App {
+  background-image: url("image.jpg");
+  border-style: double;
+  margin: 20px 300px;
+  padding: 10px;
+  border-color: blue;
+  border-radius: 12px;
+}
+
+.App-header {
+  font-size: xx-large;
+  color: red;
+  padding: 10px;
+  text-align: right;
+}
+.icon {
+  text-align: right;
+  padding: 10px;
+}
+.card-body {
+  color: aqua;
+  margin: 10px 5px 0 10px;
+  padding: 10px;
+}
+
+.card-title {
+  color: aliceblue;
+  font-weight: 400;
+  font-size: 30px;
+}
