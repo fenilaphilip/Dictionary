@@ -4,7 +4,7 @@ export default function Search() {
   const [keyword, setKeyword] = useState("");
   function handleSearch(event) {
     event.preventDefault();
-    console.log("Searching");
+    console.log(`searching ${keyword}`);
   }
   function updateSearchingWord(event) {
     setKeyword(event.target.value);
