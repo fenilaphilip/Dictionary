@@ -1,15 +1,14 @@
 .App {
   background-image: url("image.jpg");
   border-style: double;
-  margin: 20px 300px;
-  padding: 10px;
   border-color: blue;
   border-radius: 12px;
+  min-height: 900px;
 }
 
 .App-header {
   font-size: xx-large;
-  color: red;
+  color: gold;
   padding: 10px;
   text-align: right;
 }
@@ -17,10 +16,8 @@
   text-align: right;
   padding: 10px;
 }
-.card-body {
+.card-text {
   color: aqua;
-  margin: 10px 5px 0 10px;
-  padding: 10px;
 }
 
 .card-title {
