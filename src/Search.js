@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-export default function Search() {
+export default function Search(props) {
   const [keyword, setKeyword] = useState("");
 
   function updateSearchingWord(event) {
@@ -14,7 +14,12 @@ export default function Search() {
     axios.get(dicitionary_api_url).then(handleResponse);
   }
   function handleResponse(response) {
-    console.log(response);
+    console.log(response.data[0]);
+    props.setResults({
+      word: response.data[0].word,
+      phonetic: response.data[0].phonetic,
+      meanings: response.data[0].meanings,
+    });
   }
 
   return (
