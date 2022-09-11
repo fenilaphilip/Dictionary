@@ -26,5 +26,6 @@
   font-size: 30px;
 }
 .display {
-  color: aliceblue;
+  margin: 30px;
+  background-color: rgba(199, 232, 189, 0.511);
 }

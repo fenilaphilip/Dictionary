@@ -1,17 +1,21 @@
 import React from "react";
+import Meaning from "./Meaning";
 
 export default function Result(props) {
   if (props.results !== null) {
     return (
-      <div className="card-body m-4">
-        <div className="display">{props.results.word}</div>
-        <div className="display">{props.results.phonetic}</div>
-        <div className="display">
-          {/* <ul>
-            {props.results.meanings.map(function(element, index) {
-              return <li key={index}>{element.definition}</li>;
-            })}
-          </ul> */}
+      <div className="row">
+        <div className="display col-lg-8 m-4">
+          <h1>{props.results.word}</h1>
+          <h3>{props.results.phonetic}</h3>
+          {props.results.meanings.map(function(element, key) {
+            return (
+              <Meaning
+                partOfSpeech={element.partOfSpeech}
+                definitions={element.definitions}
+              />
+            );
+          })}
         </div>
       </div>
     );

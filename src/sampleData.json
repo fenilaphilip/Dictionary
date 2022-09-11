@@ -1,0 +1,21 @@
+{
+  "word": "climate",
+  "phonetic": "/ˈklaɪmɪt/",
+  "meanings": [
+    {
+      "partOfSpeech": "noun",
+      "definitions": [
+        {
+          "definition": "An area of the earth's surface between two parallels of latitude."
+        },
+        {
+          "definition": "The context in general of a particular political, moral etc. situation."
+        }
+      ]
+    },
+    {
+      "partOfSpeech": "verb",
+      "definitions": [{ "definition": "To dwell." }]
+    }
+  ]
+}
