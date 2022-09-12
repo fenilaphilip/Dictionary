@@ -7,20 +7,17 @@ export default function Meaning(props) {
   console.log(definitions);
 
   return (
-    <ul>
-      <li className="list-group-item list-group-item-warning p-4">
+    <ol className="p-0 rounded">
+      <li className="list-group-item list-group-item-danger p-2">
         {partOfSpeech}
       </li>
       {definitions.map(function(element, index) {
         return (
-          <li
-            key={index}
-            className="list-group-item list-group-item-success p-4"
-          >
-            {element.definition}
+          <li key={index} className="list-group-item list-group-item-info p-2">
+            {index + 1}. {element.definition}
           </li>
         );
       })}
-    </ul>
+    </ol>
   );
 }
