@@ -12,6 +12,12 @@
   padding: 10px;
   text-align: right;
 }
+.sub-header {
+  color: rgb(0, 255, 136);
+  margin: 0 60px;
+  padding: 10px;
+  text-align: right;
+}
 .icon {
   text-align: right;
   padding: 10px;
