@@ -8,11 +8,12 @@ export default function Result(props) {
         <div className="bg-light rounded col-lg-8 p-4">
           <h1>{props.results.word}</h1>
           <h3>{props.results.phonetic}</h3>
-          {props.results.meanings.map(function(element, key) {
+          {props.results.meanings.map(function(element) {
             return (
               <Meaning
                 partOfSpeech={element.partOfSpeech}
                 definitions={element.definitions}
+                synonyms={element.synonyms}
               />
             );
           })}

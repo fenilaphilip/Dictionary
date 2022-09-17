@@ -5,44 +5,67 @@ import Result from "./Result";
 
 export default function App() {
   const [results, setResults] = useState({
-    word: "climate",
-    phonetic: "/ˈklaɪmɪt/",
+    word: "sunset",
+    phonetic: "/ˈsʌnˌsɛt/",
     meanings: [
       {
         partOfSpeech: "noun",
         definitions: [
           {
             definition:
-              "An area of the earth's surface between two parallels of latitude.",
+              "The time of day when the sun disappears below the western horizon.",
             synonyms: [],
             antonyms: [],
           },
           {
-            definition: "A region of the Earth.",
+            definition: "The changes in color of the sky at sunset.",
             synonyms: [],
             antonyms: [],
           },
           {
-            definition:
-              "The long-term manifestations of weather and other atmospheric conditions in a given area or country, now usually represented by the statistical summary of its weather conditions during a period long enough to ensure that representative values are obtained (generally 30 years).",
+            definition: "The final period of the life of a person or thing.",
             synonyms: [],
             antonyms: [],
+            example: "one's sunset years",
           },
           {
-            definition:
-              "The context in general of a particular political, moral etc. situation.",
+            definition: "Having a set termination date.",
             synonyms: [],
             antonyms: [],
             example:
-              "Industries that require a lot of fossil fuels are unlikely to be popular in the current political climate.",
+              "The tax increase legislation included a sunset clause requiring renewal to prevent the tax increase from expiring.",
+          },
+          {
+            definition: "The region where the sun sets; the west.",
+            synonyms: [],
+            antonyms: [],
           },
         ],
-        synonyms: [],
-        antonyms: [],
+        synonyms: [
+          "last",
+          "terminal",
+          "twilight",
+          "end",
+          "final act",
+          "swansong",
+          "dusk",
+          "nightfall",
+          "sundown",
+          "twilight",
+        ],
+        antonyms: ["sunrise"],
       },
       {
         partOfSpeech: "verb",
-        definitions: [{ definition: "To dwell.", synonyms: [], antonyms: [] }],
+        definitions: [
+          {
+            definition: "To phase out.",
+            synonyms: [],
+            antonyms: [],
+            example:
+              "We'll be sunsetting version 1.9 of the software shortly after releasing version 2.0 next quarter.",
+          },
+        ],
         synonyms: [],
         antonyms: [],
       },
