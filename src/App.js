@@ -83,6 +83,7 @@ export default function App() {
       },
     ],
   });
+  const [images, setImages] = useState([]);
 
   return (
     <div className="App container col-m-8">
@@ -108,11 +109,11 @@ export default function App() {
           <p className="card-text mt-4 pt-4">
             What word do you want to look up?
           </p>
-          <Search setResults={setResults} />
+          <Search setResults={setResults} setImages={setImages} />
           <div className="sub-header">English-English</div>
         </div>
       </div>
-      <Result results={results} />
+      <Result results={results} images={images} />
     </div>
   );
 }

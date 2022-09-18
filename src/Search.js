@@ -14,10 +14,10 @@ export default function Search(props) {
     axios.get(dicitionary_api_url).then(handleResponse);
 
     const image_api_key = `563492ad6f91700001000001dd5012d75b81473291b465a83952731e`;
-    let photos_api_url = `https://api.pexels.com/v1/search?query=${keyword}`;
+    let photos_api_url = `https://api.pexels.com/v1/search?query=${keyword}&per_page=12&orientation=square`;
     axios
       .get(photos_api_url, {
-        headers: { Authorization: `Bearer: ${image_api_key}` },
+        headers: { Authorization: `${image_api_key}` },
       })
       .then(handlePhotoResponse);
   }
@@ -31,7 +31,8 @@ export default function Search(props) {
     });
   }
   function handlePhotoResponse(response) {
-    console.log(response);
+    let photos = response.data.photos;
+    props.setImages(photos);
   }
 
   return (

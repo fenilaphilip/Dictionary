@@ -1,6 +1,7 @@
 import React from "react";
 import Meaning from "./Meaning";
 import ReactAudioPlayer from "react-audio-player";
+import Photos from "./Photos";
 
 export default function Result(props) {
   if (props.results !== null) {
@@ -21,7 +22,7 @@ export default function Result(props) {
           })}
         </div>
         <div className="bg-light rounded col p-4">
-          <h6>Images</h6>
+          <Photos photos={props.images} />
         </div>
       </div>
     );
