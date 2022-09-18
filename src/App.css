@@ -18,9 +18,10 @@
   padding: 10px;
   text-align: right;
 }
-.icon {
+.logo {
   text-align: right;
-  padding: 10px;
+  max-width: 150px;
+  max-height: 350px;
 }
 .card-text {
   color: aqua;
@@ -30,4 +31,20 @@
   color: aliceblue;
   font-weight: 400;
   font-size: 30px;
+}
+.meaningshow {
+  background: linear-gradient(
+    90deg,
+    #f7babc,
+    #f5dbb7 10%,
+    #d5d7a1 20%,
+    #aed29e 30%,
+    #9ccbcf 40%,
+    #a3cfd9 50%,
+    #96adc9 60%,
+    #9e9dce 70%,
+    #b798c7 80%,
+    #ce9abf 90%,
+    #e5adab
+  );
 }
