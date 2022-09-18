@@ -18,6 +18,10 @@
   padding: 10px;
   text-align: right;
 }
+.icon {
+  max-width: 100px;
+  max-height: 100px;
+}
 .logo {
   text-align: right;
   max-width: 150px;
