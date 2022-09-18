@@ -12,6 +12,14 @@ export default function Search(props) {
     console.log(`searching ${keyword}`);
     let dicitionary_api_url = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
     axios.get(dicitionary_api_url).then(handleResponse);
+
+    const image_api_key = `563492ad6f91700001000001dd5012d75b81473291b465a83952731e`;
+    let photos_api_url = `https://api.pexels.com/v1/search?query=${keyword}`;
+    axios
+      .get(photos_api_url, {
+        headers: { Authorization: `Bearer: ${image_api_key}` },
+      })
+      .then(handlePhotoResponse);
   }
   function handleResponse(response) {
     console.log(response.data[0]);
@@ -21,6 +29,9 @@ export default function Search(props) {
       phonetics: response.data[0].phonetics,
       meanings: response.data[0].meanings,
     });
+  }
+  function handlePhotoResponse(response) {
+    console.log(response);
   }
 
   return (

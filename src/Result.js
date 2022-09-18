@@ -8,7 +8,7 @@ export default function Result(props) {
       <div className="meaningshow row p-2 m-4">
         <div className="bg-light rounded col-lg-8 me-2 p-2">
           <h1>{props.results.word}</h1>
-          <h3>{props.results.phonetic}</h3>
+          <h3>{props.results.phonetics[0].text}</h3>
           <ReactAudioPlayer src={props.results.phonetics[0].audio} controls />
           {props.results.meanings.map(function(element) {
             return (
