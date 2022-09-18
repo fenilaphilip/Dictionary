@@ -7,6 +7,18 @@ export default function App() {
   const [results, setResults] = useState({
     word: "sunset",
     phonetic: "/ˈsʌnˌsɛt/",
+    phonetics: [
+      {
+        text: "/ˈsʌnˌsɛt/",
+        audio:
+          "https://api.dictionaryapi.dev/media/pronunciations/en/sunset-us.mp3",
+        sourceUrl: "https://commons.wikimedia.org/w/index.php?curid=1763056",
+        license: {
+          name: "BY-SA 3.0",
+          url: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      },
+    ],
     meanings: [
       {
         partOfSpeech: "noun",
@@ -100,7 +112,6 @@ export default function App() {
           <div className="sub-header">English-English</div>
         </div>
       </div>
-
       <Result results={results} />
     </div>
   );

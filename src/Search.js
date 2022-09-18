@@ -18,6 +18,7 @@ export default function Search(props) {
     props.setResults({
       word: response.data[0].word,
       phonetic: response.data[0].phonetic,
+      phonetics: response.data[0].phonetics,
       meanings: response.data[0].meanings,
     });
   }

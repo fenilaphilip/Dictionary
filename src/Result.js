@@ -1,5 +1,6 @@
 import React from "react";
 import Meaning from "./Meaning";
+import ReactAudioPlayer from "react-audio-player";
 
 export default function Result(props) {
   if (props.results !== null) {
@@ -8,6 +9,7 @@ export default function Result(props) {
         <div className="bg-light rounded col-lg-8 me-2 p-2">
           <h1>{props.results.word}</h1>
           <h3>{props.results.phonetic}</h3>
+          <ReactAudioPlayer src={props.results.phonetics[0].audio} controls />
           {props.results.meanings.map(function(element) {
             return (
               <Meaning

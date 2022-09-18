@@ -19,9 +19,15 @@ export default function Meaning(props) {
               className="list-group-item list-group-item-info p-2"
             >
               {index + 1}. {element.definition}
-              <div>
-                <i>&nbsp; {element.example}</i>
-              </div>
+              {(() => {
+                if (element.example != null) {
+                  return (
+                    <div>
+                      <i>Example:&nbsp; {element.example}</i>
+                    </div>
+                  );
+                }
+              })()}
             </li>
           );
         })}
