@@ -3,7 +3,7 @@
   border-style: double;
   border-color: blue;
   border-radius: 12px;
-  min-height: 900px;
+  min-height: 1000px;
 }
 
 .App-header {
@@ -51,4 +51,7 @@
     #ce9abf 90%,
     #e5adab
   );
+}
+.meaningshow > div {
+  max-height: 700px;
 }

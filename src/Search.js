@@ -25,10 +25,10 @@ export default function Search(props) {
     console.log(response.data[0]);
     props.setResults({
       word: response.data[0].word,
-      phonetic: response.data[0].phonetic,
       phonetics: response.data[0].phonetics,
       meanings: response.data[0].meanings,
     });
+    props.setLoaded(true);
   }
   function handlePhotoResponse(response) {
     let photos = response.data.photos;

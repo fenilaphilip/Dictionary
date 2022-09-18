@@ -8,7 +8,7 @@ export default function Photos(props) {
       <h6>Images</h6>
       {gallery.map(function(element) {
         return (
-          <img src={element.src.small} alt={element.alt} className="m-2" />
+          <img src={element.src.small} alt={element.alt} className="m-2 p-2" />
         );
       })}
     </div>
