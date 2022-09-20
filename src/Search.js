@@ -2,9 +2,13 @@ import React, { useState } from "react";
 import axios from "axios";
 
 export default function Search(props) {
-  const [keyword, setKeyword] = useState("sunset");
+  const [keyword, setKeyword] = useState("");
 
-  function showDictionary(keyword) {
+  function updateSearchingWord(event) {
+    setKeyword(event.target.value);
+  }
+  function handleSearch(event) {
+    event.preventDefault();
     console.log(`searching ${keyword}`);
     let dicitionary_api_url = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
     axios.get(dicitionary_api_url).then(handleResponse);
@@ -17,13 +21,6 @@ export default function Search(props) {
       })
       .then(handlePhotoResponse);
   }
-  function updateSearchingWord(event) {
-    setKeyword(event.target.value);
-  }
-  function handleSearch(event) {
-    event.preventDefault();
-    showDictionary(keyword);
-  }
   function handleResponse(response) {
     console.log(response.data[0]);
     props.setResults({
@@ -31,13 +28,12 @@ export default function Search(props) {
       phonetics: response.data[0].phonetics,
       meanings: response.data[0].meanings,
     });
+    props.setLoaded(true);
   }
   function handlePhotoResponse(response) {
     let photos = response.data.photos;
     props.setImages(photos);
-    props.setLoaded(true);
   }
-  showDictionary(keyword);
 
   return (
     <div className="col-m-6">
