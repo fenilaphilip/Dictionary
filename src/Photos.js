@@ -6,9 +6,9 @@ export default function Photos(props) {
   return (
     <div>
       <h6>Images</h6>
-      {gallery.map(function(element) {
+      {gallery.map(function (element) {
         return (
-          <img src={element.src.small} alt={element.alt} className="m-2 p-2" />
+          <img src={element.src.small} alt={element.alt} className="m-1 rounded border border-black resultImg" width={180} />
         );
       })}
     </div>

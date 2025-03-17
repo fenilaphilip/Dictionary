@@ -23,7 +23,6 @@
   max-height: 100px;
 }
 .logo {
-  text-align: right;
   max-width: 150px;
   max-height: 350px;
 }
@@ -54,4 +53,27 @@
 }
 .meaningshow > div {
   max-height: 700px;
+}
+
+@media screen and (max-width: 420px) {
+  .logodiv {
+    display: none;
+  }
+  .icon {
+    width: 60px;
+  }
+  .App-header {
+    font-size: medium;
+  }
+  .card-title {
+    font-size: 20px;
+  }
+  .resultImg {
+    width: 100px;
+  }
+}
+@media screen and (min-width: 990px) {
+  .resultImg {
+    width: 125px;
+  }
 }

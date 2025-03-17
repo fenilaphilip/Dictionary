@@ -9,27 +9,27 @@ export default function App() {
   const [images, setImages] = useState([]);
 
   return (
-    <div className="App container col-m-8">
-      <header className="App-header m-4">
+    <div className="App container col-m-12">
+      <header className="App-header">
         <img
           src={require("./images/magnifying-glass-book.png")}
           alt="logo"
           className="icon"
         />
-        DICTIONARY{" "}
+        DICTIONARY
       </header>
 
-      <div className="row m-2">
-        <div className="col-3">
+      <div className="row">
+        <div className="col-3 logodiv">
           <img
             src={require("./images/childrens-books-clip-art.png")}
             alt="logo"
             className="logo"
           />
         </div>
-        <div className="col m-2">
-          <h5 className="card-title mt-4">Look up a word, learn it forever!</h5>
-          <p className="card-text mt-4 pt-4">
+        <div className="col">
+          <h5 className="card-title p-1">Look up a word, learn it forever!</h5>
+          <p className="card-text p-1">
             What word do you want to look up?
           </p>
           <Search
@@ -37,6 +37,7 @@ export default function App() {
             setImages={setImages}
             setLoaded={setLoaded}
           />
+          <p className="text-white pt-1">Try something like cake, moon, watch, bulb, cat, apple... </p>
           <div className="sub-header">English-English</div>
         </div>
       </div>
