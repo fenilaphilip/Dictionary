@@ -36,7 +36,7 @@ export default function Search(props) {
   }
 
   return (
-    <div className="col-m-6">
+    <div className="col search">
       <form onSubmit={handleSearch}>
         <input
           type="search"
