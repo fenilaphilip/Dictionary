@@ -8,7 +8,7 @@ A React application built with the help of two different third-party `Restful AP
 
 - User can search a word.
 - Displays word definitions, synonyms, antonyms and example sentences.
-- Available engish prounication of a word.
+- Available English prounication of a word.
 - Shows related images using external API.
 
 ## Technologies
