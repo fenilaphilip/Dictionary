@@ -1,4 +1,4 @@
-import "./App.css";
+import "./styles/App.css";
 import React, { useState } from "react";
 import Search from "./Search";
 import Result from "./Result";
@@ -12,7 +12,7 @@ export default function App() {
     <div className="App container col-m-8">
       <header className="App-header m-4">
         <img
-          src={require("./magnifying-glass-book.png")}
+          src={require("./images/magnifying-glass-book.png")}
           alt="logo"
           className="icon"
         />
@@ -22,7 +22,7 @@ export default function App() {
       <div className="row m-2">
         <div className="col-3">
           <img
-            src={require("./childrens-books-clip-art.png")}
+            src={require("./images/childrens-books-clip-art.png")}
             alt="logo"
             className="logo"
           />
